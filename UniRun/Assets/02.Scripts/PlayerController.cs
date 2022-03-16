@@ -134,6 +134,10 @@ public class PlayerController : MonoBehaviour
         {
             Die();
         }
+        else if(collision.tag == "Spark" && !isDead)
+        {
+            if (GameManager.instance.Crash() == true) Die();
+        }
     }
 
     // 충돌! 유니티! 충돌 굉장히 다양하게 사용이 됩니다.
