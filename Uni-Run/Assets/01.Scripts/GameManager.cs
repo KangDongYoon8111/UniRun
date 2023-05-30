@@ -71,4 +71,24 @@ public class GameManager : MonoBehaviour
         isGameover = true;
         gameoverUI.SetActive(true);
     }
+
+    // 버튼 연동 메서드
+    public void Restart()
+    {
+        // 게임 재시작 기능
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Exit()
+    {
+        // 게임을 종료하는 기능
+        Application.Quit();
+    }
+
+    public void TimeState(int time)
+    {
+        // 게임의 시간의 흐름을 조정 기능
+        Time.timeScale = time;
+    }
+
 }
